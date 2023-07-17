@@ -39,6 +39,7 @@
 
   .hero__inner {
     min-height: 22rem;
+    gap: 1rem;
   }
 
   .hero {
