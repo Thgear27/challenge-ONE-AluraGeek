@@ -1,0 +1,47 @@
+.hero {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 41.15%, rgba(0, 0, 0, 0.8) 100%),
+    url("/assets/img/Hero.png"), lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 1rem 0;
+}
+
+.hero__inner {
+  min-height: 12rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-end;
+}
+
+.hero__subtitle {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-semi-bold);
+}
+
+.hero__title,
+.hero__subtitle {
+  font-weight: var(--fw-bold);
+  color: var(--clr-white-400);
+}
+
+/* Tablet and Desktop */
+@media screen and (min-width: 700px) {
+  .hero__subtitle {
+    font-size: var(--fs-500);
+  }
+
+  .hero__inner {
+    min-height: 22rem;
+  }
+
+  .hero {
+    padding: 2rem 0;
+  }
+}
