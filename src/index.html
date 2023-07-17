@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/layout/header.css" />
+    <link rel="stylesheet" href="assets/css/components/search.css">
+    <link rel="stylesheet" href="assets/css/components/button.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>AluraGeek</title>
+  </head>
+
+  <body>
+    <header class="header bg-white">
+      <div class="container header__inner">
+        <a class="header__logo-link" href="index.html">
+          <img
+            class="header__logo-img"
+            src="assets/img/logo.svg"
+            alt="alura-logo"
+          />
+        </a>
+        <form class="search search--push-right">
+          <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
+          <img
+            class="search__img"
+            src="assets/img/search-glass-desktop.svg"
+            alt="search glass"
+          />
+        </form>
+        <a class="button button--inverted button--maxwidth" href="#">Login</a>
+        <button class="search__mobile-button">
+          <img class="search__mobile-button-img" src="assets/img/search-glass-mobile.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__inner container">
+          <h1 class="hero__title heading-1">Febrero Promocional</h1>
+          <p class="hero__subtitle">Producto seleccionados con 33% de descuento</p>
+          <button class="button">Ver Consolas</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

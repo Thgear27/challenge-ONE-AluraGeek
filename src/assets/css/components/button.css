@@ -1,0 +1,39 @@
+.button {
+  border: 0;
+  padding: 12px 16px;
+  color: var(--clr-white-400);
+  font-weight: var(--fw-semi-bold);
+  background-color: var(--clr-blue-400);
+  font-size: var(--fs-400);
+  text-decoration: none;
+}
+
+.button--maxwidth {
+  width: 100%;
+  max-width: 133px;
+  text-align: center;
+}
+
+.button--inverted {
+  border: 2px solid var(--clr-blue-400);
+  background-color: var(--clr-white-400);
+  color: var(--clr-blue-400);
+}
+
+/* Tablets and Desktop */
+@media screen and (min-width: 700px) {
+  .button--maxwidth {
+    max-width: 170px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+  .button {
+    padding: 16px;
+  }
+
+  .button--maxwidth {
+    max-width: 190px;
+  }
+}
