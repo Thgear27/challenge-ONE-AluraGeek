@@ -8,7 +8,6 @@
     url("/assets/img/Hero.png"), lightgray 50% / cover no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  padding: 1rem 0;
 }
 
 .hero__inner {
@@ -40,9 +39,5 @@
   .hero__inner {
     min-height: 22rem;
     gap: 1rem;
-  }
-
-  .hero {
-    padding: 2rem 0;
   }
 }

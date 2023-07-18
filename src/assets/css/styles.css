@@ -83,6 +83,10 @@ body {
   margin: 0 auto;
 }
 
+.section {
+  padding: 1rem 0;
+}
+
 .bg-skyblue {
   background-color: var(--bg-clr-skyblue);
 }
@@ -99,6 +103,10 @@ body {
 @media screen and (min-width: 700px) {
   .container {
     width: 80%;
+  }
+
+  .section {
+    padding: 2rem 0;
   }
 }
 
