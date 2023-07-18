@@ -22,10 +22,10 @@
 .hero__subtitle {
   font-size: var(--fs-300);
   font-weight: var(--fw-semi-bold);
+  color: var(--clr-white-400);
 }
 
-.hero__title,
-.hero__subtitle {
+.hero__title {
   font-weight: var(--fw-bold);
   color: var(--clr-white-400);
 }
@@ -34,6 +34,7 @@
 @media screen and (min-width: 700px) {
   .hero__subtitle {
     font-size: var(--fs-500);
+    font-weight: var(--fw-bold);
   }
 
   .hero__inner {
