@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
 
-  gap: 0.5rem;
+  gap: 1rem;
 
   padding: 1rem 0;
 }
@@ -32,10 +32,18 @@
   max-width: 100px;
 }
 
+.header .button {
+  margin-right: auto;
+}
+
 /* Tablet and Desktop */
 @media screen and (min-width: 700px) {
   .header__inner {
     gap: 2rem;
+  }
+
+  .header .button {
+    margin-right: 0;
   }
 }
 

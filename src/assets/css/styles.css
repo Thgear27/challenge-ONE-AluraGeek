@@ -46,6 +46,10 @@ body {
   font-family: var(--ff-primary);
 }
 
+p {
+  color: var(--clr-grey-500);
+}
+
 /* Mobile */
 .heading-1 {
   font-size: var(--fs-500);

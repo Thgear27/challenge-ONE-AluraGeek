@@ -1,0 +1,50 @@
+.product-card {
+  /* max-width: auto; */
+  /* min-width: 176px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-card__img-container {
+  position: relative;
+  height: 174px;
+}
+
+.product-card__img {
+  max-width: none;
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  /* This is awesome */
+  object-fit: cover;
+
+  /* This centers the image even if it is larger than the container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-card__title {
+  font-weight: var(--fw-medium);
+}
+
+.product-card__price {
+  font-weight: var(--fw-bold);
+}
+
+.product-card__link {
+  color: var(--clr-blue-400);
+  font-weight: var(--fw-bold);
+}
+
+/* Tablets and Desktop */
+@media screen and (min-width: 700px) {
+  /* .product-card {
+    max-width: calc(1/6 * 100%);
+  } */
+}
