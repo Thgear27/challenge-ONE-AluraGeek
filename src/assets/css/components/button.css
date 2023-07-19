@@ -31,6 +31,7 @@
 @media screen and (min-width: 1000px) {
   .button {
     padding: 16px;
+    font-weight: var(--fw-regular);
   }
 
   .button--maxwidth {
