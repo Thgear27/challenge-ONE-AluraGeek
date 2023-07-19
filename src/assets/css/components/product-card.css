@@ -1,5 +1,5 @@
 .product-card {
-  max-width: 220px;
+  max-width: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -41,9 +41,9 @@
   font-weight: var(--fw-bold);
 }
 
-/* Tablets and Desktop
+/* Tablets and Desktop */
 @media screen and (min-width: 700px) {
   .product-card {
-    max-width: 176px;
+    max-width: 220px;
   }
-} */
+}
