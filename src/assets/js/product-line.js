@@ -3,12 +3,18 @@ const PRODUCT_CARD_AMOUNT_BY_PRODUCT_LINE = 6;
 document.addEventListener("DOMContentLoaded", function () {
   let media = matchMedia("(min-width: 700px)");
 
-  if (media.matches) fixGridHeightAll();
-  else autoHeightGrid();
+  if (media.matches) {
+    fixGridHeightAll();
+  } else {
+    autoHeightGrid();
+  }
 
   media.addEventListener("change", (event) => {
-    if (event.matches) fixGridHeightAll();
-    else autoHeightGrid();
+    if (event.matches) {
+      fixGridHeightAll();
+    } else {
+      autoHeightGrid();
+    }
   });
 });
 
