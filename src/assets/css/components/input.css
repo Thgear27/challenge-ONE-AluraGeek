@@ -21,18 +21,20 @@ textarea {
 .input-container__label {
   position: absolute;
   inset: 0;
-  top: 16px;
-  left: 12px;
+  padding: 16px 0 0 12px;
+  margin-right: 18px;
   color: var(--clr-grey-400);
   transition: all 0.2s ease;
+  height: min-content;
+  background-color: white;
 }
 
 .input-container__input:focus + .input-container__label {
-  top: 8px;
+  padding-top: 8px;
   font-size: var(--fs-200);
 }
 
 .input-container__input[isempty="false"] + .input-container__label {
-  top: 8px !important;
-  font-size: var(--fs-200) !important;
+  padding-top: 8px;
+  font-size: var(--fs-200);
 }
