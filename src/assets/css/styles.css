@@ -103,6 +103,14 @@ p {
   background-color: var(--bg-clr-white);
 }
 
+.hover-move-up {
+  transition: transform 0.2s ease;
+}
+
+.hover-move-up:hover {
+  transform: scale(0.98);
+}
+
 /* Tablets and Desktop */
 @media screen and (min-width: 700px) {
   .container {

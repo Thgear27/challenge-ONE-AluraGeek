@@ -6,6 +6,7 @@
   background-color: var(--clr-blue-400);
   font-size: var(--fs-400);
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .button--maxwidth {
@@ -18,6 +19,12 @@
   border: 2px solid var(--clr-blue-400);
   background-color: var(--clr-white-400);
   color: var(--clr-blue-400);
+}
+
+.button:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 25px -13px rgba(0, 0, 0, 0.237);
+  cursor: pointer;
 }
 
 /* Tablets and Desktop */
