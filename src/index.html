@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="assets/css/layout/hero.css" />
     <link rel="stylesheet" href="assets/css/layout/product-line.css" />
     <link rel="stylesheet" href="assets/css/components/product-card.css" />
-    <link rel="stylesheet" href="assets/css/components/input.css">
+    <link rel="stylesheet" href="assets/css/components/input.css" />
     <link rel="stylesheet" href="assets/css/layout/form.css" />
+    <link rel="stylesheet" href="assets/css/layout/footer.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -337,35 +338,64 @@
         </div>
       </section>
     </main>
-    <footer class="footer bg-skyblue">
+    <footer class="footer bg-skyblue section">
       <div class="footer__inner container">
         <div class="footer__content">
           <img src="assets/img/logo.svg" alt="logo image" />
-          <ul role="list" class="links-list">
-            <li><a href="#">Quiene Somos</a></li>
-            <li><a href="#">Política de privacidad</a></li>
-            <li><a href="#">Programa de fidelidad</a></li>
-            <li><a href="#">Nuestras tiendas</a></li>
-            <li><a href="#">Quiero ser franquiciado</a></li>
-            <li><a href="#">Anuncie aquí</a></li>
+          <ul role="list" class="footer__links-list">
+            <li class="footer__links-list-item">
+              <a href="#">Quienes Somos</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Política de privacidad</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Programa de fidelidad</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Nuestras tiendas</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Quiero ser franquiciado</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Anuncie aquí</a>
+            </li>
           </ul>
         </div>
         <div class="footer__form section">
           <form class="form">
             <h3 class="form__title">Hable con nosotros</h3>
             <div class="input-container">
-              <input class="input-container__input" isempty="true" type="text" id="username" />
-              <label class="input-container__label" for="username">Nombre</label>
+              <input
+                class="input-container__input"
+                isempty="true"
+                type="text"
+                id="username"
+              />
+              <label class="input-container__label" for="username"
+                >Nombre</label
+              >
             </div>
             <div class="input-container">
-              <textarea class="input-container__input" isempty="true" name="massage-area" id="message"></textarea>
-              <label class="input-container__label" for="message">Escribe tu mensaje</label>
+              <textarea
+                class="input-container__input"
+                isempty="true"
+                name="massage-area"
+                id="message"
+              ></textarea>
+              <label class="input-container__label" for="message"
+                >Escribe tu mensaje</label
+              >
             </div>
             <button class="form__button button">Enviar mensaje</button>
           </form>
         </div>
       </div>
     </footer>
+    <div class="copy section bg-white">
+      <p class="copy__text container">Desarrollado por <a  href="https://github.com/Thgear27" target="_blank">@Thgear27</a></p>
+    </div>
     <script type="module" src="assets/js/product-line.js"></script>
     <script type="module" src="assets/js/form.js"></script>
   </body>
