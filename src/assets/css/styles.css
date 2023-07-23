@@ -46,7 +46,13 @@ body {
   font-family: var(--ff-primary);
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--clr-grey-500);
 }
 
@@ -91,6 +97,10 @@ p {
   padding: 1rem 0;
 }
 
+.section--accent-padding {
+  padding: 5rem 0;
+}
+
 .bg-skyblue {
   background-color: var(--bg-clr-skyblue);
 }
@@ -119,6 +129,10 @@ p {
 
   .section {
     padding: 2rem 0;
+  }
+
+  .section--accent-padding {
+    padding: 5rem 0;
   }
 }
 

@@ -6,6 +6,7 @@ textarea {
 
 .input-container {
   position: relative;
+  width: 100%;
 }
 
 .input-container__input {
@@ -20,13 +21,14 @@ textarea {
 
 .input-container__label {
   position: absolute;
+  width: 100%;
   inset: 0;
   padding: 16px 0 0 12px;
-  margin-right: 18px;
   color: var(--clr-grey-400);
-  transition: all 0.2s ease;
+  transition: none;
   height: min-content;
   background-color: white;
+  z-index: 1;
 }
 
 .input-container__input:focus + .input-container__label {
@@ -37,4 +39,15 @@ textarea {
 .input-container__input[isempty="false"] + .input-container__label {
   padding-top: 8px;
   font-size: var(--fs-200);
+}
+
+.input-container ::-webkit-scrollbar {
+  display: none;
+}
+
+/* Tablets and Desktop */
+@media screen and (min-width: 700px) {
+  .input-container__label {
+    transition: all 0.2s ease;
+  }
 }

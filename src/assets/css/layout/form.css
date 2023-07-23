@@ -1,18 +1,60 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form--login-gap {
+  gap: 27px;
+}
+
+.form--login-width {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form--items-centered {
+  align-items: center;
+  justify-content: center;
 }
 
 .form__title {
-    font-size: var(--fs-400);
+  font-size: var(--fs-400);
 }
 
 .form__button {
-    width: min-content;
-    white-space: nowrap;
+  width: min-content;
+  white-space: nowrap;
 }
 
-.form .input-container + .input-container {
-    margin-top: 8px;
+.form--footer .input-container + .input-container {
+  margin-top: 8px;
+}
+
+/* Especial one, for the labels to not wrap */
+@media screen and (max-width: 350px) {
+  .form--login-width {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .input-container__label {
+    font-size: var(--fs-300);
+  }
+}
+
+/* Tablets and Desktop */
+@media screen and (min-width: 700px) {
+  .form--login-width {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+  .form--login-width {
+    width: 50%;
+    margin: 0 auto;
+  }
 }

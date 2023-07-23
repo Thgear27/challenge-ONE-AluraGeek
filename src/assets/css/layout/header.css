@@ -36,7 +36,7 @@
   margin: 0 auto;
 }
 
-/* Tablet and Desktop */
+/* Tablets and Desktop */
 @media screen and (min-width: 700px) {
   .header__inner {
     gap: 2rem;
