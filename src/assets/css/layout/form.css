@@ -22,9 +22,17 @@
   font-size: var(--fs-400);
 }
 
+.form__title--fs-450 {
+  font-size: var(--fs-400);
+}
+
 .form__button {
   width: min-content;
   white-space: nowrap;
+}
+
+.form__button--full-width {
+  width: 100%;
 }
 
 .form--footer .input-container + .input-container {
