@@ -28,6 +28,26 @@
   transform: translate(-50%, -50%);
 }
 
+.product-card__icons-container {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+
+  z-index: 2;
+}
+
+.product-card__trash-icon,
+.product-card__pencil-icon {
+  padding: 11px;
+  transition: transform 0.3s ease;
+}
+
+.product-card__trash-icon:hover,
+.product-card__pencil-icon:hover {
+  transform: scale(1.2);
+}
+
 .product-card__title {
   font-weight: var(--fw-medium);
 }
@@ -39,6 +59,12 @@
 .product-card__link {
   color: var(--clr-blue-400);
   font-weight: var(--fw-bold);
+}
+
+.product-card--grid-item .product-card__id {
+  color: var(--clr-grey-500);
+  font-size: var(--fs-300);
+  font-weight: var(--fw-medium);
 }
 
 /* Tablets and Desktop */
