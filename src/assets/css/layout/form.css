@@ -4,13 +4,16 @@
   gap: 8px;
 }
 
-.form--login-gap {
+.form--login {
+  width: 100%;
+  margin: 0 auto;
   gap: 27px;
 }
 
-.form--login-width {
-  width: 80%;
+.form--addproduct {
+  width: 100%;
   margin: 0 auto;
+  gap: 27px;
 }
 
 .form--items-centered {
@@ -41,8 +44,8 @@
 
 /* Especial one, for the labels to not wrap */
 @media screen and (max-width: 350px) {
-  .form--login-width {
-    width: 95%;
+  .form--login {
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -53,7 +56,7 @@
 
 /* Tablets and Desktop */
 @media screen and (min-width: 700px) {
-  .form--login-width {
+  .form--login {
     width: 70%;
     margin: 0 auto;
   }
@@ -64,5 +67,9 @@
   .form--login-width {
     width: 50%;
     margin: 0 auto;
+  }
+
+  .form--addproduct {
+    width: 70%;
   }
 }

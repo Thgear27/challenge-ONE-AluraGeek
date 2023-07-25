@@ -19,6 +19,10 @@ textarea {
   color: var(--clr-grey-500);
 }
 
+.input-container__input::placeholder {
+  visibility: hidden;
+}
+
 .input-container__label {
   position: absolute;
   width: 100%;
@@ -31,15 +35,16 @@ textarea {
   z-index: 1;
 }
 
+.input-container__input:not(:placeholder-shown) + .input-container__label,
 .input-container__input:focus + .input-container__label {
   padding-top: 8px;
   font-size: var(--fs-200);
 }
 
-.input-container__input[isempty="false"] + .input-container__label {
+/* .input-container__input[isempty="false"] + .input-container__label {
   padding-top: 8px;
   font-size: var(--fs-200);
-}
+} */
 
 .input-container ::-webkit-scrollbar {
   display: none;

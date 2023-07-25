@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/svg+xml" href="assets/Group.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/Group.svg" />
     <link rel="stylesheet" href="/assets/css/reset.css" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/layout/header.css" />
@@ -35,6 +35,7 @@
           <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
           <img class="search__img" src="/assets/img/search-glass-desktop.svg" alt="search glass" />
         </form>
+        <a class="button button--inverted button--fs-300" href="/products/">Menú Administrador</a>
         <button class="search__mobile-button">
           <img class="search__mobile-button-img" src="/assets/img/search-glass-mobile.svg" alt="" />
         </button>
@@ -44,15 +45,27 @@
     <main>
       <section class="section bg-grey section--accent-padding">
         <div class="container">
-          <form class="form form--items-centered form--login">
-            <h3 class="form__title form__title--fs-450">Iniciar Sesión</h3>
+          <form class="form form--addproduct">
+            <h2 class="heading-2">Agregar nuevo producto</h2>
             <div class="input-container">
-              <input class="input-container__input" type="email" id="email" placeholder="-" />
-              <label class="input-container__label" for="email">Escriba su correo electrónico</label>
+              <input class="input-container__input" type="text" id="email" placeholder="-" />
+              <label class="input-container__label" for="email">URL de la imagen</label>
             </div>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="password" placeholder="-" />
-              <label class="input-container__label" for="password">Escriba su contraseña</label>
+              <input class="input-container__input" type="text" id="categoria" placeholder="-" />
+              <label class="input-container__label" for="categoria">Categoría</label>
+            </div>
+            <div class="input-container">
+              <input class="input-container__input" type="text" id="productname" placeholder="-" />
+              <label class="input-container__label" for="productname">Nombre del producto</label>
+            </div>
+            <div class="input-container">
+              <input class="input-container__input" type="text" id="productprice" placeholder="-" />
+              <label class="input-container__label" for="productprice">Precio del producto</label>
+            </div>
+            <div class="input-container">
+              <textarea class="input-container__input" type="text" id="descripcion" placeholder="-"></textarea>
+              <label class="input-container__label" for="descripcion">Descripcion del producto</label>
             </div>
             <button class="form__button--full-width button">Entrar</button>
           </form>

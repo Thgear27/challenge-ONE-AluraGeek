@@ -11,6 +11,7 @@
 
 .product-line__title {
   color: var(--clr-grey-500);
+  text-transform: capitalize;
 }
 
 .product-line__top {

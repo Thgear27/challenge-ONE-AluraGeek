@@ -10,6 +10,8 @@
   text-decoration: none;
   transition: all 0.2s ease;
   z-index: 0;
+
+  text-align: center;
 }
 
 .button:after {
@@ -51,6 +53,10 @@
   border: 2px solid var(--clr-blue-400);
   background-color: var(--clr-white-400);
   color: var(--clr-blue-400);
+}
+
+.button--fs-300 {
+  font-size: var(--fs-300);
 }
 
 /* Tablets and Desktop */
