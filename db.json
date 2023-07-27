@@ -1,0 +1,146 @@
+{
+  "users": [
+    {
+      "name": "gear",
+      "emai": "gear@gear.com",
+      "password": "123",
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "name": "Star Wars",
+      "id": 1
+    },
+    {
+      "name": "Consolas",
+      "id": 2
+    },
+    {
+      "name": "Diversos",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "Stromtrooper 10cm Figure",
+      "imgURL": "https://www.justgeek.com/cdn/shop/files/b4889p9-8_360x.jpg",
+      "price": "11.99",
+      "category": "Star Wars",
+      "description": "Introducing the Stromtrooper 10cm Figure from the iconic Star Wars collection. Embrace the Galactic Empire's formidable presence with this meticulously crafted figurine. Immerse yourself in the thrilling Star Wars universe and display your love for the legendary saga with this must-have collectible. May the Force be with you!",
+      "id": 1
+    },
+    {
+      "name": "R2D2 Pen and Plant Plot",
+      "imgURL": "https://www.justgeek.com/cdn/shop/files/PP9497SW_Star_Wars_R2D2_Pen_and_Plant_Pot_Lifestyle_2_800_x_800_200x.webp",
+      "price": "11.99",
+      "category": "Star Wars",
+      "description": "Unite the charm of Star Wars with practicality and nature using the R2D2 Pen and Plant Plot. This delightful piece combines a functional pen holder with a mini plant pot, featuring the lovable R2D2 design. Keep your workspace organized with this adorable accessory, and let the greenery add a touch of serenity to your daily adventures in the galaxy.",
+      "id": 2
+    },
+    {
+      "name": "Star Wars Logo Light",
+      "imgURL": "https://www.justgeek.com/cdn/shop/files/Star-Wars-Logo-Light-2_360x.webp",
+      "price": "20.99",
+      "category": "Star Wars",
+      "description": "Illuminate your passion for Star Wars with the captivating Star Wars Logo Light. This sleek and stylish light features the iconic Star Wars logo, bringing the spirit of the saga to any room or space. Whether you're a die-hard fan or a casual admirer, this logo light is a perfect addition to your Star Wars collection and a great way to showcase your love for the timeless franchise.",
+      "id": 3
+    },
+    {
+      "name": "Cable Guy Star Wars Chewbacca",
+      "imgURL": "https://www.justgeek.com/cdn/shop/products/chewbaccacableguylifestyleimage1_20_2_a7c04824-e026-4152-87b2-800ea8db2965_540x.jpg",
+      "price": "8.99",
+      "category": "Star Wars",
+      "description": "Carry the legendary Millennium Falcon with you wherever you go with this meticulously crafted metal keychain. This iconic Star Wars spaceship keychain is the perfect accessory for any fan, and its durable design ensures it can withstand your daily adventures across the galaxy.",
+      "id": 4
+    },
+    {
+      "name": "Star Wars Pin Kings",
+      "imgURL": "https://www.justgeek.com/cdn/shop/products/star-wars-3.1-pin-kings-1_280x.jpg",
+      "price": "14.99",
+      "category": "Star Wars",
+      "description": "Embrace the dark side of your morning routine with the Darth Vader Ceramic Mug. Sip your favorite beverage while showcasing your passion for Star Wars and the enigmatic Sith Lord. This mug's high-quality ceramic construction keeps your drinks hot and your admiration for the Star Wars universe even hotter.",
+      "id": 5
+    },
+    {
+      "name": "Star Wars Playing Cards",
+      "imgURL": "https://www.justgeek.com/cdn/shop/products/SW15_160x.png",
+      "price": "5.99",
+      "category": "Star Wars",
+      "description": "Proudly display your allegiance to the Jedi Order with this intricately detailed embroidered patch. Perfect for adding a touch of Star Wars flair to your clothing, bags, or accessories. Join the ranks of the Jedi and let the Force guide your path!",
+      "id": 6
+    },
+    {
+      "name": "Official Xbox Premium Tower",
+      "imgURL": "https://www.justgeek.com/cdn/shop/products/xbox-tower-800x800-1_360x.jpg",
+      "price": "19.99",
+      "category": "Consoles",
+      "description": "With this official Xbox games storage tower, you can keep your favourite and most-played games secure and safe. Store up to ten of your favourite Xbox games as well as Blu-ray movies, or stack multiple units for even more storage! Ideal for neat gamers. Official Microsoft product. Designed and engineered by Numskull. Holds up to 10 Xbox Series X or Xbox One games.",
+      "id": 7
+    },
+    {
+      "name": "Play Station 5",
+      "imgURL": "https://phantom-marca.unidadeditorial.es/143925b02dc4d5cf2aa69d718c079b36/resize/828/f/jpg/assets/multimedia/imagenes/2022/08/25/16614333035643.jpg",
+      "price": "2000.99",
+      "category": "Consoles",
+      "description": "With this official Xbox games storage tower, you can keep your favourite and most-played games secure and safe. Store up to ten of your favourite Xbox games as well as Blu-ray movies, or stack multiple units for even more storage! Ideal for neat gamers. Official Microsoft product. Designed and engineered by Numskull. Holds up to 10 Xbox Series X or Xbox One games.",
+      "id": 8
+    },
+    {
+      "name": "Ocuclust Quest",
+      "imgURL": "https://falabella.scene7.com/is/image/FalabellaPE/19683375_06?wid=800&hei=800&qlt=70",
+      "price": "2100.99",
+      "category": "Consoles",
+      "description": "With this official Xbox games storage tower, you can keep your favourite and most-played games secure and safe. Store up to ten of your favourite Xbox games as well as Blu-ray movies, or stack multiple units for even more storage! Ideal for neat gamers. Official Microsoft product. Designed and engineered by Numskull. Holds up to 10 Xbox Series X or Xbox One games.",
+      "id": 9
+    },
+    {
+      "name": "Xbox Core Wallet",
+      "imgURL": "https://www.justgeek.com/cdn/shop/files/XBOX-Wallet-2_360x.jpg",
+      "price": "20.99",
+      "category": "Consoles",
+      "description": "Unite the charm of Star Wars with practicality and nature using the R2D2 Pen and Plant Plot. This delightful piece combines a functional pen holder with a mini plant pot, featuring the lovable R2D2 design. Keep your workspace organized with this adorable accessory, and let the greenery add a touch of serenity to your daily adventures in the galaxy.",
+      "id": 10
+    },
+    {
+      "name": "Dreamcast White Water Bottle",
+      "imgURL": "https://www.justgeek.com/cdn/shop/products/dreamcast-water-bottle-sega-2_360x.jpg",
+      "price": "5.99",
+      "category": "Consoles",
+      "description": "Unite the charm of Star Wars with practicality and nature using the R2D2 Pen and Plant Plot. This delightful piece combines a functional pen holder with a mini plant pot, featuring the lovable R2D2 design. Keep your workspace organized with this adorable accessory, and let the greenery add a touch of serenity to your daily adventures in the galaxy.",
+      "id": 11
+    },
+    {
+      "name": "Cat Ears Headphones",
+      "imgURL": "https://www.justgeek.com/cdn/shop/products/cat-kids-headphones-new-4_360x.jpg",
+      "price": "12.99",
+      "category": "Consoles",
+      "description": "Illuminate your passion for Star Wars with the captivating Star Wars Logo Light. This sleek and stylish light features the iconic Star Wars logo, bringing the spirit of the saga to any room or space. Whether you're a die-hard fan or a casual admirer, this logo light is a perfect addition to your Star Wars collection and a great way to showcase your love for the timeless franchise.",
+      "id": 12
+    },
+    {
+      "name": "Ozzy Osbourne Cosplaying Duck",
+      "imgURL": "https://www.justgeek.com/cdn/shop/files/Ozzy_DiaryofaMadMan_TUBBZ_PL_1_540x.jpg",
+      "price": "15.99",
+      "category": "Diversos",
+      "description":"Illuminate your passion for Star Wars with the captivating Star Wars Logo Light. This sleek and stylish light features the iconic Star Wars logo, bringing the spirit of the saga to any room or space. Whether you're a die-hard fan or a casual admirer, this logo light is a perfect addition to your Star Wars collection and a great way to showcase your love for the timeless franchise.",
+      "id": 13
+    },
+    {
+      "name": "Minecraft Redstone Lamp",
+      "imgURL": "https://www.justgeek.com/cdn/shop/products/pal-mc-mluk1_360x.jpg",
+      "price": "39.99",
+      "category": "Diversos",
+      "description": "Introducing the Stromtrooper 10cm Figure from the iconic Star Wars collection. Embrace the Galactic Empire's formidable presence with this meticulously crafted figurine. Immerse yourself in the thrilling Star Wars universe and display your love for the legendary saga with this must-have collectible. May the Force be with you!",
+      "id": 14
+    },
+    {
+      "name": "Kratos Cosplaying Duck",
+      "imgURL": "https://www.justgeek.com/cdn/shop/files/Kratos_GOWRagnarok_TUBBZ_PL_3_360x.jpg",
+      "price": "19.99",
+      "category": "Diversos",
+      "description":"With this official Xbox games storage tower, you can keep your favourite and most-played games secure and safe. Store up to ten of your favourite Xbox games as well as Blu-ray movies, or stack multiple units for even more storage! Ideal for neat gamers. Official Microsoft product. Designed and engineered by Numskull. Holds up to 10 Xbox Series X or Xbox One games.",
+      "id": 15
+    }
+  ]
+}

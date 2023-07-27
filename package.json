@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "json-server": "^0.17.3"
   }
 }
