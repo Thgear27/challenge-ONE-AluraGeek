@@ -47,12 +47,21 @@
           <form class="form form--items-centered form--login">
             <h3 class="form__title form__title--fs-450">Iniciar Sesión</h3>
             <div class="input-container">
-              <input class="input-container__input" type="email" id="email" placeholder="-" />
+              <input
+                class="input-container__input"
+                type="email"
+                id="email"
+                placeholder="-"
+                pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}(?:\.[a-zA-Z]{2,})?$"
+                required
+              />
               <label class="input-container__label" for="email">Escriba su correo electrónico</label>
+              <div data-forinput="email" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="password" placeholder="-" />
+              <input class="input-container__input" type="password" id="password" placeholder="-" required />
               <label class="input-container__label" for="password">Escriba su contraseña</label>
+              <div data-forinput="password" class="input-container__message hide">Campo requerido</div>
             </div>
             <button class="form__button--full-width button">Entrar</button>
           </form>
@@ -93,6 +102,7 @@
             <div class="input-container">
               <input class="input-container__input" type="text" id="username" placeholder="-" />
               <label class="input-container__label" for="username"> Nombre </label>
+              <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
               <textarea class="input-container__input" name="massage-area" id="message" placeholder="-"></textarea>
@@ -110,5 +120,6 @@
         <a href="https://github.com/Thgear27" target="_blank">@Thgear27</a>
       </p>
     </div>
+    <script type="module" src="/assets/js/form.js"></script>
   </body>
 </html>

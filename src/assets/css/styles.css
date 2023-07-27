@@ -121,6 +121,10 @@ h6 {
   transform: scale(0.98);
 }
 
+.hide {
+  display: none;
+}
+
 /* Tablets and Desktop */
 @media screen and (min-width: 700px) {
   .container {

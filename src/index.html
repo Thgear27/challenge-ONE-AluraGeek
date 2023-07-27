@@ -76,7 +76,11 @@
               <a href="#" class="hover-move-up">
                 <div class="product-card">
                   <div class="product-card__img-container">
-                    <img class="product-card__img" src="https://www.justgeek.com/cdn/shop/products/chewbaccacableguylifestyleimage1_20_2_a7c04824-e026-4152-87b2-800ea8db2965_540x.jpg" alt="product image" />
+                    <img
+                      class="product-card__img"
+                      src="https://www.justgeek.com/cdn/shop/products/chewbaccacableguylifestyleimage1_20_2_a7c04824-e026-4152-87b2-800ea8db2965_540x.jpg"
+                      alt="product image"
+                    />
                   </div>
                   <p class="product-card__title">Producto XYZ</p>
                   <p class="product-card__price">$ 60,00</p>
@@ -303,11 +307,12 @@
           <form class="form form--footer">
             <h3 class="form__title">Hable con nosotros</h3>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="username" placeholder="placeholder"/>
-              <label class="input-container__label" for="username"> Nombre </label>
+              <input class="input-container__input" type="text" id="username" placeholder="-" />
+              <label class="input-container__label" for="username">Nombre</label>
+              <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <textarea class="input-container__input" name="massage-area" id="message" placeholder="placeholder"></textarea>
+              <textarea class="input-container__input" name="massage-area" id="message" placeholder="-"></textarea>
               <label class="input-container__label" for="message"> Escribe tu mensaje </label>
             </div>
             <button class="form__button button">Enviar mensaje</button>
@@ -322,5 +327,6 @@
       </p>
     </div>
     <script type="module" src="/assets/js/product-line.js"></script>
+    <script type="module" src="/assets/js/form.js"></script>
   </body>
 </html>

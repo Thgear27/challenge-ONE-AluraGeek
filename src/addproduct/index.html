@@ -48,24 +48,29 @@
           <form class="form form--addproduct">
             <h2 class="heading-2">Agregar nuevo producto</h2>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="email" placeholder="-" />
+              <input class="input-container__input" type="text" id="email" placeholder="-" required />
               <label class="input-container__label" for="email">URL de la imagen</label>
+              <div data-forinput="email" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="categoria" placeholder="-" />
+              <input class="input-container__input" type="text" id="categoria" placeholder="-" required />
               <label class="input-container__label" for="categoria">Categoría</label>
+              <div data-forinput="categoria" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="productname" placeholder="-" />
+              <input class="input-container__input" type="text" id="productname" placeholder="-" required />
               <label class="input-container__label" for="productname">Nombre del producto</label>
+              <div data-forinput="productname" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="productprice" placeholder="-" />
+              <input class="input-container__input" type="text" id="productprice" placeholder="-" required />
               <label class="input-container__label" for="productprice">Precio del producto</label>
+              <div data-forinput="productprice" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
               <textarea class="input-container__input" type="text" id="descripcion" placeholder="-"></textarea>
               <label class="input-container__label" for="descripcion">Descripcion del producto</label>
+              <div data-forinput="descripcion" class="input-container__message hide">Campo requerido</div>
             </div>
             <button class="form__button--full-width button">Entrar</button>
           </form>
@@ -106,6 +111,7 @@
             <div class="input-container">
               <input class="input-container__input" type="text" id="username" placeholder="-" />
               <label class="input-container__label" for="username"> Nombre </label>
+              <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
               <textarea class="input-container__input" name="massage-area" id="message" placeholder="-"></textarea>
@@ -123,5 +129,6 @@
         <a href="https://github.com/Thgear27" target="_blank">@Thgear27</a>
       </p>
     </div>
+    <script type="module" src="/assets/js/form.js"></script>
   </body>
 </html>

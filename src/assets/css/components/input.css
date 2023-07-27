@@ -25,13 +25,14 @@ textarea {
 
 .input-container__label {
   position: absolute;
-  width: 100%;
   inset: 0;
   padding: 16px 0 0 12px;
+  margin: 0px;
+
   color: var(--clr-grey-400);
-  transition: none;
+  transition: all 0.1s ease;
   height: min-content;
-  background-color: white;
+  /* background-color: white; */
   z-index: 1;
 }
 
@@ -41,13 +42,29 @@ textarea {
   font-size: var(--fs-200);
 }
 
-/* .input-container__input[isempty="false"] + .input-container__label {
-  padding-top: 8px;
-  font-size: var(--fs-200);
-} */
-
 .input-container ::-webkit-scrollbar {
   display: none;
+}
+
+textarea + .input-container__label {
+  background-color: white;
+}
+
+.input-invalid {
+  border: 1px solid red;
+}
+
+.input-invalid ~ .input-container__label {
+  color: rgba(255, 0, 0, 0.7);
+}
+
+.input-container__message {
+  position: absolute;
+  margin-left: 14px;
+  margin-top: 2px;
+  color: rgba(255, 0, 0, 0.7);
+  bottom: -18px;
+  font-size: var(--fs-200);
 }
 
 /* Tablets and Desktop */
