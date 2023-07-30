@@ -8,10 +8,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        login: resolve(__dirname, "login/index.html"),
+        login: resolve(__dirname, "loginpage/index.html"),
         products: resolve(__dirname, "products/index.html"),
         addproduct: resolve(__dirname, "addproduct/index.html"),
       },
     },
+    cssCodeSplit: false,
   },
 });
