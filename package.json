@@ -12,6 +12,7 @@
     "vite": "^4.4.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "json-server": "^0.17.3"
   }
 }
