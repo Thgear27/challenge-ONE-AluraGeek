@@ -1,5 +1,5 @@
+
 import * as productService from "../services/product-service.js";
-import * as categoriesService from "../services/categories-service.js";
 
 import pencilIcon from "../assets/img/pencil-icon.svg";
 import trashIcon from "../assets/img/trash-icon.svg";
@@ -30,20 +30,12 @@ function getProdutCardHTML(name, price, imgURL, id) {
 
 async function renderGalleryGrid() {
   let gallery = document.querySelector("[data-gallery-grid]");
-  let galleryTitle = document.querySelector("[data-gallery-title]");
-  const urlParams = new URLSearchParams(window.location.search);
-  const categoryid = urlParams.get("categoryid");
   let categoryName = "";
-
-  await categoriesService.getAllCategories().then((response) => {
-    categoryName = Array.from(response).filter((item) => item.id == categoryid)[0].name;
-    galleryTitle.innerHTML = `Todos los productos: ${categoryName}`;
-  });
 
   await productService
     .getAllProducts()
     .then((response) => {
-      return Array.from(response).filter((item) => item.category == categoryName);
+      return Array.from(response);
     })
     .then((products) => {
       const galleryInnerHTML = products.reduce((acumulator, item) => {

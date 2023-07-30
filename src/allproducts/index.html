@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" type="image/svg+xml" href="../assets/Group.svg" />
-
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/layout/header.css" />
@@ -14,6 +13,8 @@
     <link rel="stylesheet" href="../assets/css/components/input.css" />
     <link rel="stylesheet" href="../assets/css/layout/form.css" />
     <link rel="stylesheet" href="../assets/css/layout/footer.css" />
+    <link rel="stylesheet" href="../assets/css/components/product-card.css" />
+    <link rel="stylesheet" href="../assets/css/layout/products-grid.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,45 +37,39 @@
           <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
           <img class="search__img" src="/assets/img/search-glass-desktop.svg" alt="search glass" />
         </form>
-        <a class="button button--inverted button--fs-300" href="/allproducts/">Menú Administrador</a>
+        <a class="button button--inverted button--maxwidth" href="/loginpage/">Login</a>
         <button class="search__mobile-button">
           <img class="search__mobile-button-img" src="/assets/img/search-glass-mobile.svg" alt="" />
         </button>
       </div>
     </header>
-
     <main>
-      <section class="section bg-grey section--accent-padding">
-        <div class="container">
-          <form class="form form--addproduct">
-            <h2 class="heading-2">Agregar nuevo producto</h2>
-            <div class="input-container">
-              <input class="input-container__input" type="text" id="email" placeholder="-" required />
-              <label class="input-container__label" for="email">URL de la imagen</label>
-              <div data-forinput="email" class="input-container__message hide">Campo requerido</div>
-            </div>
-            <div class="input-container">
-              <input class="input-container__input" type="text" id="categoria" placeholder="-" required />
-              <label class="input-container__label" for="categoria">Categoría</label>
-              <div data-forinput="categoria" class="input-container__message hide">Campo requerido</div>
-            </div>
-            <div class="input-container">
-              <input class="input-container__input" type="text" id="productname" placeholder="-" required />
-              <label class="input-container__label" for="productname">Nombre del producto</label>
-              <div data-forinput="productname" class="input-container__message hide">Campo requerido</div>
-            </div>
-            <div class="input-container">
-              <input class="input-container__input" type="text" id="productprice" placeholder="-" required />
-              <label class="input-container__label" for="productprice">Precio del producto</label>
-              <div data-forinput="productprice" class="input-container__message hide">Campo requerido</div>
-            </div>
-            <div class="input-container">
-              <textarea class="input-container__input" type="text" id="descripcion" placeholder="-"></textarea>
-              <label class="input-container__label" for="descripcion">Descripcion del producto</label>
-              <div data-forinput="descripcion" class="input-container__message hide">Campo requerido</div>
-            </div>
-            <button class="form__button--full-width button">Entrar</button>
-          </form>
+      <section class="section bg-grey products">
+        <div class="products__inner container">
+          <div class="products__top">
+            <h1 class="heading-2">Todos los productos</h1>
+            <a class="button" href="/addproduct/">Agregar producto</a>
+          </div>
+          <div data-gallery-grid class="products__grid">
+            <!-- <div class="product-card--grid-item product-card">
+              <div class="product-card__img-container">
+                <a href="/">
+                  <img class="product-card__img" src="/assets/img/product1.png" alt="product image" />
+                </a>
+                <div class="product-card__icons-container">
+                  <a href="#">
+                    <img class="product-card__trash-icon" src="/assets/img/trash-icon.svg" alt="trash icon" />
+                  </a>
+                  <a href="#">
+                    <img class="product-card__pencil-icon" src="/assets/img/pencil-icon.svg" alt="pencil icon" />
+                  </a>
+                </div>
+              </div>
+              <p class="product-card__title">Producto XYZ</p>
+              <p class="product-card__price">$ 60,00</p>
+              <p class="product-card__id">#111111111</p>
+            </div> -->
+          </div>
         </div>
       </section>
     </main>
@@ -110,9 +105,8 @@
           <form class="form form--footer">
             <h3 class="form__title">Hable con nosotros</h3>
             <div class="input-container">
-              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" />
+              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" required />
               <label class="input-container__label" for="username"> Nombre </label>
-              <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
               <textarea
@@ -130,13 +124,13 @@
         </div>
       </div>
     </footer>
-
     <div class="copy section bg-white">
       <p class="copy__text container">
         Desarrollado por
         <a href="https://github.com/Thgear27" target="_blank">@Thgear27</a>
       </p>
     </div>
-    <script type="module" src="/assets/js/form.js"></script>
+    <script type="module" src="../controllers/all-products.js"></script>
   </body>
 </html>
+

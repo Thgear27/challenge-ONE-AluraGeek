@@ -45,10 +45,11 @@
     <main>
       <section class="section bg-grey section--accent-padding">
         <div class="container">
-          <form class="form form--items-centered form--login">
+          <form data-form class="form form--items-centered form--login">
             <h3 class="form__title form__title--fs-450">Iniciar Sesión</h3>
             <div class="input-container">
               <input
+                data-form-email
                 class="input-container__input"
                 type="email"
                 id="email"
@@ -60,11 +61,18 @@
               <div data-forinput="email" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <input class="input-container__input" type="password" id="password" placeholder="-" required />
+              <input
+                data-form-password
+                class="input-container__input"
+                type="password"
+                id="password"
+                placeholder="-"
+                required
+              />
               <label class="input-container__label" for="password">Escriba su contraseña</label>
               <div data-forinput="password" class="input-container__message hide">Campo requerido</div>
             </div>
-            <button class="form__button--full-width button">Entrar</button>
+            <button data-form-button class="form__button--full-width button">Entrar</button>
           </form>
         </div>
       </section>
@@ -101,12 +109,19 @@
           <form class="form form--footer">
             <h3 class="form__title">Hable con nosotros</h3>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="username" placeholder="-" />
+              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" required />
               <label class="input-container__label" for="username"> Nombre </label>
               <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <textarea class="input-container__input" name="massage-area" id="message" placeholder="-"></textarea>
+              <textarea
+                class="input-container__input"
+                maxlength="120"
+                name="massage-area"
+                id="message"
+                placeholder="-"
+                required
+              ></textarea>
               <label class="input-container__label" for="message"> Escribe tu mensaje </label>
             </div>
             <button class="form__button button">Enviar mensaje</button>
@@ -122,5 +137,6 @@
       </p>
     </div>
     <script type="module" src="/assets/js/form.js"></script>
+    <script type="module" src="../controllers/login-controller.js"></script>
   </body>
 </html>

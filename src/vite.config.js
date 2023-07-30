@@ -10,6 +10,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         login: resolve(__dirname, "loginpage/index.html"),
         products: resolve(__dirname, "products/index.html"),
+        allproducts: resolve(__dirname, "allproducts/index.html"),
         addproduct: resolve(__dirname, "addproduct/index.html"),
       },
     },

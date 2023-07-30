@@ -47,11 +47,9 @@
       <section class="section bg-grey products">
         <div class="products__inner container">
           <div class="products__top">
-            <h1 class="heading-2">Todos los productos</h1>
-            <a class="button" href="/addproduct/">Agregar producto</a>
+            <h1 data-gallery-title class="heading-2">Todos los productos</h1>
           </div>
           <div data-gallery-grid class="products__grid">
-
             <!-- <div class="product-card--grid-item product-card">
               <div class="product-card__img-container">
                 <a href="/">
@@ -70,7 +68,6 @@
               <p class="product-card__price">$ 60,00</p>
               <p class="product-card__id">#111111111</p>
             </div> -->
-
           </div>
         </div>
       </section>
@@ -107,11 +104,18 @@
           <form class="form form--footer">
             <h3 class="form__title">Hable con nosotros</h3>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="username" placeholder="-" />
+              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" required />
               <label class="input-container__label" for="username"> Nombre </label>
             </div>
             <div class="input-container">
-              <textarea class="input-container__input" name="massage-area" id="message" placeholder="-"></textarea>
+              <textarea
+                class="input-container__input"
+                maxlength="120"
+                name="massage-area"
+                id="message"
+                placeholder="-"
+                required
+              ></textarea>
               <label class="input-container__label" for="message"> Escribe tu mensaje </label>
             </div>
             <button class="form__button button">Enviar mensaje</button>

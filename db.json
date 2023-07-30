@@ -2,7 +2,7 @@
   "users": [
     {
       "name": "gear",
-      "emai": "gear@gear.com",
+      "email": "gear@gear.com",
       "password": "123",
       "id": 1
     }

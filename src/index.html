@@ -54,7 +54,6 @@
       </section>
       <section class="gallery section">
         <div data-gallery-inner class="gallery__inner container">
-
           <!-- <div data-aos="fade-up" class="product-line">
             <div class="product-line__top">
               <h2 class="product-line__title heading-2">Star Wars</h2>
@@ -76,7 +75,6 @@
               </a>
             </div>
           </div> -->
-        
         </div>
       </section>
     </main>
@@ -111,12 +109,19 @@
           <form class="form form--footer">
             <h3 class="form__title">Hable con nosotros</h3>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="username" placeholder="-" />
+              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" required/>
               <label class="input-container__label" for="username">Nombre</label>
               <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <textarea class="input-container__input" name="massage-area" id="message" placeholder="-"></textarea>
+              <textarea
+                class="input-container__input"
+                maxlength="120"
+                name="massage-area"
+                id="message"
+                placeholder="-"
+                required
+              ></textarea>
               <label class="input-container__label" for="message"> Escribe tu mensaje </label>
             </div>
             <button class="form__button button">Enviar mensaje</button>
