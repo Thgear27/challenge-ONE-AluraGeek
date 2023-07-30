@@ -4,7 +4,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
+
+  flex-wrap: wrap;
 
   gap: 1rem;
 
@@ -21,7 +24,7 @@
 }
 
 .search {
-  width: 40%;
+  width: 35%;
 }
 
 .search--push-right {
@@ -32,14 +35,25 @@
   max-width: 100px;
 }
 
-.header .button {
+.header__buttons-container {
+  display: flex;
+  gap: 0.625rem;
   margin: 0 auto;
 }
 
+.header__login-button {
+  margin: 0 auto;
+}
 /* Tablets and Desktop */
 @media screen and (min-width: 700px) {
   .header__inner {
     gap: 2rem;
+  }
+
+  .header__buttons-container {
+    display: flex;
+    gap: 0.625rem;
+    margin: 0;
   }
 
   .header .button {

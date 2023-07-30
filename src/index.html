@@ -6,7 +6,6 @@
 
     <link rel="icon" type="image/svg+xml" href="/assets/Group.svg" />
     <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/layout/header.css" />
     <link rel="stylesheet" href="/assets/css/components/search.css" />
     <link rel="stylesheet" href="/assets/css/components/button.css" />
@@ -16,6 +15,7 @@
     <link rel="stylesheet" href="/assets/css/components/input.css" />
     <link rel="stylesheet" href="/assets/css/layout/form.css" />
     <link rel="stylesheet" href="/assets/css/layout/footer.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +38,13 @@
           <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
           <img class="search__img" src="/assets/img/search-glass-desktop.svg" alt="search glass" />
         </form>
-        <a class="button button--inverted button--maxwidth" href="/loginpage/">Login</a>
+
+        <a data-login-button class="button button--inverted button--maxwidth header__login-button" href="/loginpage/">Login</a>
+        <div data-logout class="header__buttons-container">
+          <a data-admin-button class="button button--inverted" href="/allproducts/">Menú Administrador</a>
+          <button data-logout-button class="button button--inverted" href="/loginpage/">Logout</button>
+        </div>
+
         <button class="search__mobile-button">
           <img class="search__mobile-button-img" src="/assets/img/search-glass-mobile.svg" alt="" />
         </button>
@@ -109,7 +115,7 @@
           <form class="form form--footer">
             <h3 class="form__title">Hable con nosotros</h3>
             <div class="input-container">
-              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" required/>
+              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" required />
               <label class="input-container__label" for="username">Nombre</label>
               <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
             </div>
@@ -135,6 +141,7 @@
         <a href="https://github.com/Thgear27" target="_blank">@Thgear27</a>
       </p>
     </div>
+    <script type="module" src="/assets/js/main.js"></script>
     <script type="module" src="/assets/js/aosapply.js"></script>
     <script type="module" src="/assets/js/product-line.js"></script>
     <script type="module" src="/assets/js/form.js"></script>

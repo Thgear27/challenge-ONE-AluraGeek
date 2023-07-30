@@ -7,13 +7,13 @@
     <link rel="icon" type="image/svg+xml" href="../assets/Group.svg" />
 
     <link rel="stylesheet" href="../assets/css/reset.css" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/layout/header.css" />
     <link rel="stylesheet" href="../assets/css/components/search.css" />
     <link rel="stylesheet" href="../assets/css/components/button.css" />
     <link rel="stylesheet" href="../assets/css/components/input.css" />
     <link rel="stylesheet" href="../assets/css/layout/form.css" />
     <link rel="stylesheet" href="../assets/css/layout/footer.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +36,13 @@
           <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
           <img class="search__img" src="/assets/img/search-glass-desktop.svg" alt="search glass" />
         </form>
-        <a class="button button--inverted button--fs-300" href="/allproducts/">Menú Administrador</a>
+
+        <a data-login-button class="button button--inverted button--maxwidth header__login-button" href="/loginpage/">Login</a>
+        <div data-logout class="header__buttons-container">
+          <a data-admin-button class="button button--inverted" href="/allproducts/">Menú Administrador</a>
+          <button data-logout-button class="button button--inverted" href="/loginpage/">Logout</button>
+        </div>
+
         <button class="search__mobile-button">
           <img class="search__mobile-button-img" src="/assets/img/search-glass-mobile.svg" alt="" />
         </button>
@@ -138,5 +144,6 @@
       </p>
     </div>
     <script type="module" src="/assets/js/form.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
   </body>
 </html>

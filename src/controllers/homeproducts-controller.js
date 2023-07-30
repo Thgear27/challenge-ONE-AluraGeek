@@ -32,7 +32,7 @@ export function renderProductLines(category, categoryid) {
       return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL);
     }, "");
 
-    console.log(productLineListHTML);
+    // console.log(productLineListHTML);
 
     let productLineHTML = `
       <div data-aos="fade-up" class="product-line">
