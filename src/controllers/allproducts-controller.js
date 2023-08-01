@@ -1,4 +1,3 @@
-
 import * as productService from "../services/product-service.js";
 
 import pencilIcon from "../assets/img/pencil-icon.svg";
@@ -43,6 +42,9 @@ async function renderGalleryGrid() {
       }, "");
       console.log(galleryInnerHTML);
       gallery.innerHTML = galleryInnerHTML;
+    })
+    .catch((error) => {
+      alert(error);
     });
 }
 

@@ -41,6 +41,10 @@
   margin: 0 auto;
 }
 
+.header__buttons-container .button {
+  font-size: var(--fs-200);
+}
+
 .header__login-button {
   margin: 0 auto;
 }
@@ -48,6 +52,10 @@
 @media screen and (min-width: 700px) {
   .header__inner {
     gap: 2rem;
+  }
+
+  .header__buttons-container .button {
+    font-size: var(--fs-400);
   }
 
   .header__buttons-container {

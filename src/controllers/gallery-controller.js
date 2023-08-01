@@ -35,10 +35,15 @@ async function renderGalleryGrid() {
   const categoryid = urlParams.get("categoryid");
   let categoryName = "";
 
-  await categoriesService.getAllCategories().then((response) => {
-    categoryName = Array.from(response).filter((item) => item.id == categoryid)[0].name;
-    galleryTitle.innerHTML = `Todos los productos: ${categoryName}`;
-  });
+  await categoriesService
+    .getAllCategories()
+    .then((response) => {
+      categoryName = Array.from(response).filter((item) => item.id == categoryid)[0].name;
+      galleryTitle.innerHTML = `Todos los productos: ${categoryName}`;
+    })
+    .catch((error) => {
+      alert(error);
+    });
 
   await productService
     .getAllProducts()
@@ -51,6 +56,9 @@ async function renderGalleryGrid() {
       }, "");
       console.log(galleryInnerHTML);
       gallery.innerHTML = galleryInnerHTML;
+    })
+    .catch((error) => {
+      alert(error);
     });
 }
 

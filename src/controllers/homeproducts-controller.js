@@ -1,5 +1,6 @@
 import * as productService from "../services/product-service.js";
 import * as categoriesService from "../services/categories-service.js";
+import * as loginService from "../services/login-service.js";
 import { applyfixGrid } from "../assets/js/product-line.js";
 import arrowSvg from "../assets/img/arrow.svg";
 
@@ -25,16 +26,18 @@ export function renderProductLines(category, categoryid) {
 
   // Obtener todos los productos de una categoria
   let productLineListHTML = "";
-  productService.getAllProducts().then((response) => {
-    let products = Array.from(response).filter((item) => item.category == category);
-    if (products.length > 6) products = products.slice(0, 6);
-    productLineListHTML = products.reduce((acumulator, item) => {
-      return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL);
-    }, "");
+  productService
+    .getAllProducts()
+    .then((response) => {
+      let products = Array.from(response).filter((item) => item.category == category);
+      if (products.length > 6) products = products.slice(0, 6);
+      productLineListHTML = products.reduce((acumulator, item) => {
+        return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL);
+      }, "");
 
-    // console.log(productLineListHTML);
+      // console.log(productLineListHTML);
 
-    let productLineHTML = `
+      let productLineHTML = `
       <div data-aos="fade-up" class="product-line">
         <div class="product-line__top">
           <h2 id="${category}" class="product-line__title heading-2">${category}</h2>
@@ -48,16 +51,24 @@ export function renderProductLines(category, categoryid) {
         </div>
       </div>
     `;
-    let productLine = document.createElement("div");
-    productLine.innerHTML = productLineHTML;
+      let productLine = document.createElement("div");
+      productLine.innerHTML = productLineHTML;
 
-    galleryInner.append(productLine);
-    applyfixGrid();
-  });
+      galleryInner.append(productLine);
+      applyfixGrid();
+    })
+    .catch((error) => {
+      alert(error);
+    });
 }
 
-categoriesService.getAllCategories().then((response) => {
-  Array.from(response).forEach((item) => {
-    renderProductLines(item.name, item.id);
+categoriesService
+  .getAllCategories()
+  .then((response) => {
+    Array.from(response).forEach((item) => {
+      renderProductLines(item.name, item.id);
+    });
+  })
+  .catch((error) => {
+    alert(error);
   });
-});

@@ -21,7 +21,6 @@ async function loginUser(email, password) {
 
 document.querySelector("[data-form]").addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(event);
   const email = document.querySelector("[data-form-email]").value;
   const password = document.querySelector("[data-form-password]").value;
   loginUser(email, password);
