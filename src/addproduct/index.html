@@ -37,7 +37,9 @@
           <img class="search__img" src="/assets/img/search-glass-desktop.svg" alt="search glass" />
         </form>
 
-        <a data-login-button class="button button--inverted button--maxwidth header__login-button" href="/loginpage/">Login</a>
+        <a data-login-button class="button button--inverted button--maxwidth header__login-button" href="/loginpage/"
+          >Login</a
+        >
         <div data-logout class="header__buttons-container">
           <a data-admin-button class="button button--inverted" href="/allproducts/">Menú Administrador</a>
           <button data-logout-button class="button button--inverted" href="/loginpage/">Logout</button>
@@ -52,17 +54,17 @@
     <main>
       <section class="section bg-grey section--accent-padding">
         <div class="container">
-          <form class="form form--addproduct">
+          <form data-addproduct-form class="form form--addproduct">
             <h2 class="heading-2">Agregar nuevo producto</h2>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="email" placeholder="-" required />
-              <label class="input-container__label" for="email">URL de la imagen</label>
-              <div data-forinput="email" class="input-container__message hide">Campo requerido</div>
+              <input class="input-container__input" type="text" id="imgURL" placeholder="-" required />
+              <label class="input-container__label" for="imgURL">URL de la imagen</label>
+              <div data-forinput="imgURL" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <input class="input-container__input" type="text" id="categoria" placeholder="-" required />
-              <label class="input-container__label" for="categoria">Categoría</label>
-              <div data-forinput="categoria" class="input-container__message hide">Campo requerido</div>
+              <select data-select-categories class="input-container__select" name="category" id="category">
+                <option class="input-container__option" value="" disabled selected>Categoria</option>
+              </select>
             </div>
             <div class="input-container">
               <input class="input-container__input" type="text" id="productname" placeholder="-" required />
@@ -75,11 +77,11 @@
               <div data-forinput="productprice" class="input-container__message hide">Campo requerido</div>
             </div>
             <div class="input-container">
-              <textarea class="input-container__input" type="text" id="descripcion" placeholder="-"></textarea>
-              <label class="input-container__label" for="descripcion">Descripcion del producto</label>
-              <div data-forinput="descripcion" class="input-container__message hide">Campo requerido</div>
+              <textarea class="input-container__input" type="text" id="description" placeholder="-"></textarea>
+              <label class="input-container__label" for="description">Descripcion del producto</label>
+              <div data-forinput="description" class="input-container__message hide">Campo requerido</div>
             </div>
-            <button class="form__button--full-width button">Entrar</button>
+            <button class="form__button--full-width button">Agregar Producto</button>
           </form>
         </div>
       </section>
@@ -145,5 +147,6 @@
     </div>
     <script type="module" src="/assets/js/form.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="../controllers/addproduct-controller.js"></script>
   </body>
 </html>

@@ -29,7 +29,6 @@ function getProdutCardHTML(name, price, imgURL, id) {
 
 async function renderGalleryGrid() {
   let gallery = document.querySelector("[data-gallery-grid]");
-  let categoryName = "";
 
   await productService
     .getAllProducts()
@@ -40,7 +39,6 @@ async function renderGalleryGrid() {
       const galleryInnerHTML = products.reduce((acumulator, item) => {
         return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL, item.id);
       }, "");
-      console.log(galleryInnerHTML);
       gallery.innerHTML = galleryInnerHTML;
     })
     .catch((error) => {

@@ -1,7 +1,5 @@
 import * as AOS from "aos";
 
-const PRODUCT_CARDS_AMOUNT_BY_PRODUCT_LINE = 6;
-
 document.addEventListener("DOMContentLoaded", function () {
   let media = matchMedia("(min-width: 700px)");
 

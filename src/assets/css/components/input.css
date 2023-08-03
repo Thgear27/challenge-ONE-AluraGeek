@@ -1,5 +1,6 @@
 input,
-textarea {
+textarea,
+select {
   outline: transparent;
   border: none;
 }
@@ -65,6 +66,28 @@ textarea + .input-container__label {
   color: rgba(255, 0, 0, 0.7);
   bottom: -18px;
   font-size: var(--fs-200);
+}
+
+.input-container__select {
+  border-radius: 4px;
+  background-color: var(--clr-white-400);
+  padding: 18px 8px;
+  border-bottom: 1px solid var(--clr-grey-300);
+  width: 100%;
+  color: var(--clr-grey-400);
+}
+
+.input-container__select.selectvalid {
+  color: var(--clr-grey-500);
+}
+
+.input-container__option {
+  border-radius: 4px;
+  background-color: var(--clr-grey-100);
+  padding: 18px 8px;
+  border-bottom: 1px solid var(--clr-grey-300);
+  width: 100%;
+  color: var(--clr-grey-500);
 }
 
 /* Tablets and Desktop */

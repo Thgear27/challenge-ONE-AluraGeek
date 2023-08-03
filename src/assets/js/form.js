@@ -33,3 +33,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const allSelects = document.querySelectorAll("select");
+allSelects.forEach((item) => {
+  item.addEventListener("change", () => {
+    if (item.validity.valid) {
+      item.classList.add("selectvalid");
+    } else {
+      item.classList.remove("selectvalid");
+    }
+  });
+});

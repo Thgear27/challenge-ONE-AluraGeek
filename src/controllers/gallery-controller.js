@@ -1,5 +1,6 @@
 import * as productService from "../services/product-service.js";
 import * as categoriesService from "../services/categories-service.js";
+import * as loginService from "../services/login-service.js";
 
 import pencilIcon from "../assets/img/pencil-icon.svg";
 import trashIcon from "../assets/img/trash-icon.svg";
@@ -11,7 +12,7 @@ function getProdutCardHTML(name, price, imgURL, id) {
         <a href="/">
           <img class="product-card__img" src="${imgURL}" alt="product image" />
         </a>
-        <div class="product-card__icons-container">
+        <div data-icons-container class="product-card__icons-container">
           <a href="#">
             <img class="product-card__trash-icon" src="${trashIcon}" alt="trash icon" />
           </a>
@@ -54,7 +55,6 @@ async function renderGalleryGrid() {
       const galleryInnerHTML = products.reduce((acumulator, item) => {
         return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL, item.id);
       }, "");
-      console.log(galleryInnerHTML);
       gallery.innerHTML = galleryInnerHTML;
     })
     .catch((error) => {
@@ -62,4 +62,14 @@ async function renderGalleryGrid() {
     });
 }
 
-renderGalleryGrid();
+renderGalleryGrid().then(() => {
+  let allIconsContainer = document.querySelectorAll("[data-icons-container]");
+
+  loginService.isUserLogged().then((isLogged) => {
+    if (!isLogged) {
+      allIconsContainer.forEach((item) => {
+        item.classList.add("hide");
+      });
+    }
+  });
+});
