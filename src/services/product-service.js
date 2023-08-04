@@ -25,3 +25,10 @@ export async function addProduct(name, imgURL, price, category, description) {
 
   return response.json();
 }
+
+export async function removeProduct(id) {
+  const response = await fetch(`${global.API_URL}/products/${id}`, {
+    method: "DELETE",
+  });
+  return response.json();
+}

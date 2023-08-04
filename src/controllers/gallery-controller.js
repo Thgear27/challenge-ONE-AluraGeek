@@ -13,9 +13,9 @@ function getProdutCardHTML(name, price, imgURL, id) {
           <img class="product-card__img" src="${imgURL}" alt="product image" />
         </a>
         <div data-icons-container class="product-card__icons-container">
-          <a href="#">
+          <button data-remove-button="${id}" style="background: none; border: none; cursor: pointer;" href="#">
             <img class="product-card__trash-icon" src="${trashIcon}" alt="trash icon" />
-          </a>
+          </button>
           <a href="#">
             <img class="product-card__pencil-icon" src="${pencilIcon}" alt="pencil icon" />
           </a>
@@ -71,5 +71,15 @@ renderGalleryGrid().then(() => {
         item.classList.add("hide");
       });
     }
+  });
+
+  let allRemoveButtons = document.querySelectorAll("[data-remove-button]");
+  allRemoveButtons.forEach((item) => {
+    item.addEventListener("click", () => {
+      console.log(item.getAttribute("data-remove-button"));
+      productService.removeProduct(item.getAttribute("data-remove-button")).then(() => {
+        window.location.reload();
+      });
+    });
   });
 });
