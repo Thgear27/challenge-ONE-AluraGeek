@@ -32,3 +32,26 @@ export async function removeProduct(id) {
   });
   return response.json();
 }
+
+export async function updateProduct(name, imgURL, price, category, description, id) {
+  const response = await fetch(`${global.API_URL}/products/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name,
+      imgURL,
+      price,
+      category,
+      description,
+    }),
+  });
+
+  return response.json();
+}
+
+export async function getProductById(id) {
+  const response = await fetch(`${global.API_URL}/products/${id}`);
+  return response.json();
+}

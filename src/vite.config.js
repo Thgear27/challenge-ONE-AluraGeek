@@ -12,6 +12,7 @@ export default defineConfig({
         products: resolve(__dirname, "products/index.html"),
         allproducts: resolve(__dirname, "allproducts/index.html"),
         addproduct: resolve(__dirname, "addproduct/index.html"),
+        editproduct: resolve(__dirname, "editproduct/index.html"),
       },
     },
     cssCodeSplit: false,

@@ -141,6 +141,14 @@
       "category": "Diversos",
       "description": "With this official Xbox games storage tower, you can keep your favourite and most-played games secure and safe. Store up to ten of your favourite Xbox games as well as Blu-ray movies, or stack multiple units for even more storage! Ideal for neat gamers. Official Microsoft product. Designed and engineered by Numskull. Holds up to 10 Xbox Series X or Xbox One games.",
       "id": 15
+    },
+    {
+      "name": "Diego Brando",
+      "imgURL": "https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2021/08/Que-es-un-Stand-y-como-funciona-esta-habilidad-sobrenatural-con-los-personajes-de-Jojos-Bizarre-Adventure-compressed.jpg",
+      "price": "99.99",
+      "category": "Consolas",
+      "description": "Es un dio de stb",
+      "id": "2d7a32e8-7735-43fd-bf45-98a9fb7a8fc1"
     }
   ]
 }

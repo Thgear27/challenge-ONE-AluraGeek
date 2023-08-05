@@ -16,7 +16,7 @@ function getProdutCardHTML(name, price, imgURL, id) {
           <button data-remove-button="${id}" style="background: none; border: none; cursor: pointer;" href="#">
             <img class="product-card__trash-icon" src="${trashIcon}" alt="trash icon" />
           </button>
-          <a href="#">
+          <a href="/editproduct/?id=${id}">
             <img class="product-card__pencil-icon" src="${pencilIcon}" alt="pencil icon" />
           </a>
         </div>

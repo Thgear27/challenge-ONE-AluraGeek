@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="../assets/Group.svg" />
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout/header.css" />
+    <link rel="stylesheet" href="../assets/css/components/search.css" />
+    <link rel="stylesheet" href="../assets/css/components/button.css" />
+    <link rel="stylesheet" href="../assets/css/components/input.css" />
+    <link rel="stylesheet" href="../assets/css/layout/form.css" />
+    <link rel="stylesheet" href="../assets/css/layout/footer.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>AluraGeek</title>
+  </head>
+
+  <body>
+    <header class="header bg-white">
+      <div class="container header__inner">
+        <a class="header__logo-link" href="/">
+          <img class="header__logo-img" src="/assets/img/logo.svg" alt="alura-logo" />
+        </a>
+        <form class="search search--push-right">
+          <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
+          <img class="search__img" src="/assets/img/search-glass-desktop.svg" alt="search glass" />
+        </form>
+
+        <a data-login-button class="button button--inverted button--maxwidth header__login-button" href="/loginpage/"
+          >Login</a
+        >
+        <div data-logout class="header__buttons-container">
+          <a data-admin-button class="button button--inverted" href="/allproducts/">Menú Administrador</a>
+          <button data-logout-button class="button button--inverted" href="/loginpage/">Logout</button>
+        </div>
+
+        <button class="search__mobile-button">
+          <img class="search__mobile-button-img" src="/assets/img/search-glass-mobile.svg" alt="" />
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section bg-grey section--accent-padding">
+        <div class="container">
+          <form data-editproduct-form class="form form--addproduct">
+            <h2 class="heading-2">Editar producto</h2>
+            <p data-id class="paragraph"><strong>id:</strong> </p>
+            <div class="input-container">
+              <input class="input-container__input" type="text" id="imgURL" placeholder="-" required />
+              <label class="input-container__label" for="imgURL">URL de la imagen</label>
+              <div data-forinput="imgURL" class="input-container__message hide">Campo requerido</div>
+            </div>
+            <div class="input-container">
+              <select data-select-categories class="input-container__select" name="category" id="category" required>
+                <option class="input-container__option" value="" disabled selected>Categoria</option>
+              </select>
+            </div>
+            <div class="input-container">
+              <input class="input-container__input" type="text" id="productname" placeholder="-" required />
+              <label class="input-container__label" for="productname">Nombre del producto</label>
+              <div data-forinput="productname" class="input-container__message hide">Campo requerido</div>
+            </div>
+            <div class="input-container">
+              <input class="input-container__input" type="text" id="productprice" placeholder="-" required />
+              <label class="input-container__label" for="productprice">Precio del producto</label>
+              <div data-forinput="productprice" class="input-container__message hide">Campo requerido</div>
+            </div>
+            <div class="input-container">
+              <textarea class="input-container__input" type="text" id="description" placeholder="-"></textarea>
+              <label class="input-container__label" for="description">Descripcion del producto</label>
+              <div data-forinput="description" class="input-container__message hide">Campo requerido</div>
+            </div>
+            <button class="form__button--full-width button">Agregar Producto</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer bg-skyblue section">
+      <div class="footer__inner container">
+        <div class="footer__content">
+          <a href="/" class="hover-move-up">
+            <img src="/assets/img/logo.svg" alt="logo image" />
+          </a>
+          <ul role="list" class="footer__links-list">
+            <li class="footer__links-list-item">
+              <a href="#">Quienes Somos</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Política de privacidad</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Programa de fidelidad</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Nuestras tiendas</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Quiero ser franquiciado</a>
+            </li>
+            <li class="footer__links-list-item">
+              <a href="#">Anuncie aquí</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__form section">
+          <form class="form form--footer">
+            <h3 class="form__title">Hable con nosotros</h3>
+            <div class="input-container">
+              <input class="input-container__input" maxlength="40" type="text" id="username" placeholder="-" />
+              <label class="input-container__label" for="username"> Nombre </label>
+              <div data-forinput="username" class="input-container__message hide">Campo requerido</div>
+            </div>
+            <div class="input-container">
+              <textarea
+                class="input-container__input"
+                maxlength="120"
+                name="massage-area"
+                id="message"
+                placeholder="-"
+                required
+              ></textarea>
+              <label class="input-container__label" for="message"> Escribe tu mensaje </label>
+            </div>
+            <button class="form__button button">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copy section bg-white">
+      <p class="copy__text container">
+        Desarrollado por
+        <a href="https://github.com/Thgear27" target="_blank">@Thgear27</a>
+      </p>
+    </div>
+    <script type="module" src="/assets/js/form.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="../controllers/editproduct-controller.js"></script>
+  </body>
+</html>
