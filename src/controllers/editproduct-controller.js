@@ -21,14 +21,16 @@ if (id == undefined) {
 let idContainer = document.querySelector("[data-id]");
 idContainer.innerHTML = `<strong>id:</strong> ${id}`;
 
-const productToEdit = await productService.getProductById(id);
-console.log(productToEdit);
-
-document.getElementById("productname").value = productToEdit.name;
-document.getElementById("imgURL").value = productToEdit.imgURL;
-document.getElementById("category").value = productToEdit.category;
-document.getElementById("productprice").value = productToEdit.price;
-document.getElementById("description").value = productToEdit.description;
+productService.getProductById(id).then((response) => {
+  let productToEdit = response;
+  setTimeout(() => {
+    document.getElementById("productname").value = productToEdit.name;
+    document.getElementById("imgURL").value = productToEdit.imgURL;
+    document.getElementById("category").value = productToEdit.category;
+    document.getElementById("productprice").value = productToEdit.price;
+    document.getElementById("description").value = productToEdit.description;
+  }, 10);
+});
 
 const addProductForm = document.querySelector("[data-editproduct-form]");
 addProductForm.addEventListener("submit", (event) => {
