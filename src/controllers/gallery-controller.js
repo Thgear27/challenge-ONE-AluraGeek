@@ -35,32 +35,49 @@ async function renderGalleryGrid() {
   let galleryTitle = document.querySelector("[data-gallery-title]");
   const urlParams = new URLSearchParams(window.location.search);
   const categoryid = urlParams.get("categoryid");
+  const productname = urlParams.get("productname");
+
+  if (categoryid == null && productname == null) window.location.href = "/";
   let categoryName = "";
 
-  await categoriesService
-    .getAllCategories()
-    .then((response) => {
+  if (categoryid !== null) {
+    console.log(categoryid);
+    console.log(productname);
+    await categoriesService.getAllCategories().then((response) => {
       categoryName = Array.from(response).filter((item) => item.id == categoryid)[0].name;
       galleryTitle.innerHTML = `Todos los productos: ${categoryName}`;
-    })
-    .catch((error) => {
-      alert(error);
     });
 
-  await productService
-    .getAllProducts()
-    .then((response) => {
-      return Array.from(response).filter((item) => item.category == categoryName);
-    })
-    .then((products) => {
-      const galleryInnerHTML = products.reduce((acumulator, item) => {
-        return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL, item.id);
-      }, "");
-      gallery.innerHTML = galleryInnerHTML;
-    })
-    .catch((error) => {
-      alert(error);
-    });
+    await productService
+      .getAllProducts()
+      .then((response) => {
+        return Array.from(response).filter((item) => item.category == categoryName);
+      })
+      .then((products) => {
+        const galleryInnerHTML = products.reduce((acumulator, item) => {
+          return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL, item.id);
+        }, "");
+        gallery.innerHTML = galleryInnerHTML;
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  } else if (productname != null) {
+    await productService
+      .getAllProducts()
+      .then((response) => {
+        return Array.from(response).filter((item) => item.name.toLowerCase().includes(productname));
+      })
+      .then((products) => {
+        const galleryInnerHTML = products.reduce((acumulator, item) => {
+          return acumulator + getProdutCardHTML(item.name, item.price, item.imgURL, item.id);
+        }, "");
+        gallery.innerHTML = galleryInnerHTML;
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 }
 
 renderGalleryGrid().then(() => {

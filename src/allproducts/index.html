@@ -33,9 +33,11 @@
         <a class="header__logo-link" href="/">
           <img class="header__logo-img" src="/assets/img/logo.svg" alt="alura-logo" />
         </a>
-        <form class="search search--push-right">
+        <form data-search-form class="search search--push-right">
           <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
-          <img class="search__img" src="/assets/img/search-glass-desktop.svg" alt="search glass" />
+          <button class="search__img" type="submit" style="border: none; background: none;">
+            <img src="/assets/img/search-glass-desktop.svg" alt="search glass" />
+          </button>
         </form>
 
         <a data-login-button class="button button--inverted button--maxwidth header__login-button" href="/loginpage/">Login</a>
@@ -138,5 +140,6 @@
     </div>
     <script type="module" src="../controllers/allproducts-controller.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="../controllers/search-controller.js"></script>
   </body>
 </html>
