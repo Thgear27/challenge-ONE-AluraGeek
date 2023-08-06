@@ -47,6 +47,14 @@
     width: 35%;
   }
 
+  .search[active="true"] {
+    transform: translateY(0);
+  }
+
+  .search[active="false"] {
+    transform: translateY(0);
+  }
+
   .search__img {
     right: 20px;
   }
