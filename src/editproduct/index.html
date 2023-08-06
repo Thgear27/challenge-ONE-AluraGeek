@@ -32,9 +32,9 @@
         <a class="header__logo-link" href="/">
           <img class="header__logo-img" src="/assets/img/logo.svg" alt="alura-logo" />
         </a>
-        <form data-search-form class="search search--push-right">
+        <form data-search-form class="search search--push-right" active="false">
           <input class="search__input" type="text" placeholder="¿Qué deseas buscar?" />
-          <button class="search__img" type="submit" style="border: none; background: none;">
+          <button class="search__img" type="submit" style="border: none; background: none">
             <img src="/assets/img/search-glass-desktop.svg" alt="search glass" />
           </button>
         </form>
@@ -47,7 +47,7 @@
           <button data-logout-button class="button button--inverted" href="/loginpage/">Logout</button>
         </div>
 
-        <button class="search__mobile-button">
+        <button data-mobile-search-button class="search__mobile-button">
           <img class="search__mobile-button-img" src="/assets/img/search-glass-mobile.svg" alt="" />
         </button>
       </div>
@@ -58,7 +58,7 @@
         <div class="container">
           <form data-editproduct-form class="form form--addproduct">
             <h2 class="heading-2">Editar producto</h2>
-            <p data-id class="paragraph"><strong>id:</strong> </p>
+            <p data-id class="paragraph"><strong>id:</strong></p>
             <div class="input-container">
               <input class="input-container__input" type="text" id="imgURL" placeholder="-" required />
               <label class="input-container__label" for="imgURL">URL de la imagen</label>
@@ -150,6 +150,7 @@
     </div>
     <script type="module" src="/assets/js/form.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="../assets/js/search.js"></script>
     <script type="module" src="../controllers/editproduct-controller.js"></script>
     <script type="module" src="../controllers/search-controller.js"></script>
   </body>
