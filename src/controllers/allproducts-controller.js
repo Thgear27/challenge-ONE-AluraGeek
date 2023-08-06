@@ -1,4 +1,5 @@
 import * as productService from "../services/product-service.js";
+import Swal from "sweetalert2";
 
 import pencilIcon from "../assets/img/pencil-icon.svg";
 import trashIcon from "../assets/img/trash-icon.svg";
@@ -50,9 +51,22 @@ renderGalleryGrid().then(() => {
   let allRemoveButtons = document.querySelectorAll("[data-remove-button]");
   allRemoveButtons.forEach((item) => {
     item.addEventListener("click", () => {
-      console.log(item.getAttribute("data-remove-button"));
-      productService.removeProduct(item.getAttribute("data-remove-button")).then(() => {
-        window.location.reload();
+      Swal.fire({
+        title: "¿Estás seguro?",
+        text: "No vas a poder revertir esta acción",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#2a7be5",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, estoy seguro",
+        cancelButtonText: "No, cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          productService.removeProduct(item.getAttribute("data-remove-button"));
+          Swal.fire("Eliminado", "El producto ha sido eliminado correctamente.", "success").then(() => {
+            window.location.reload();
+          });
+        }
       });
     });
   });
